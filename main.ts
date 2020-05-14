@@ -212,7 +212,7 @@ namespace max7219{
     /**
     * Print a text accross the chain of MAX7219 matrixs at a specific spot. Offset value -8 ~ last column of matrixs. You can choose to clear the screen or not (if not it can be used to print multiple string on the MAX7219 chain).
     */
-    //% block="Display text $text|offset $offset|clear screen first $clear" text.defl="Hi!" offset.min=-8 clear.defl=true group="2. Display text on matrixs" blockExternalInputs=true
+    //% block="Display text $text|offset $offset|clear screen first $clear" text.defl="Hi!" offset.min=-8 clear.defl=true group="2. Display text on matrixs" blockExternalInputs=true advanced=true
     export function displayText(text: string, offset: number, clear: boolean) {
         // clear screen and array if needed
         if (clear) {
@@ -469,7 +469,7 @@ namespace max7219{
     /**
     * Set LEDs of a specific MAX7219s to a pattern from a 8x8 number matrix variable (index 0=farthest on the chain)
     */
-    //% block="Display 8x8 pattern $newMatrix|on matrix index = $index" index.min=0 blockExternalInputs=true group="4. Set custom LED pattern on matrixs"
+    //% block="Display 8x8 pattern $newMatrix|on matrix index = $index" index.min=0 blockExternalInputs=true group="4. Set custom LED pattern on matrixs" advanced=true
     export function displayLEDsForOne(newMatrix: number[][], index: number) {
         let columnValue = 0
         if (newMatrix != null) {
@@ -492,7 +492,7 @@ namespace max7219{
     /**
     * Return a empty 8x8 number matrix variable
     */
-    //% block="Empty 8x8 pattern" group="4. Set custom LED pattern on matrixs"
+    //% block="Empty 8x8 pattern" group="4. Set custom LED pattern on matrixs" advanced=true
     export function getEmptyMatrix() {
         return [
             [0, 0, 0, 0, 0, 0, 0, 0],
@@ -534,7 +534,7 @@ namespace max7219{
     /**
     * Set a specific value in a 8x8 number matrix variable
     */
-    //% block="Set 8x8 pattern %matrix|x = $x y = $y value to $value" value.min=0 value.max=1 x.min=0 x.max=7 y.min=0 y.max=7 group="4. Set custom LED pattern on matrixs" blockExternalInputs=true
+    //% block="Set 8x8 pattern %matrix|x = $x y = $y value to $value" value.min=0 value.max=1 x.min=0 x.max=7 y.min=0 y.max=7 group="4. Set custom LED pattern on matrixs" blockExternalInputs=true advanced=true
     export function setValueInMatrix(matrix: number[][], x: number, y: number, value: number) {
         matrix[x][y] = value
     }
