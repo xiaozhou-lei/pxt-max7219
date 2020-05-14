@@ -1,0 +1,15 @@
+{
+    "name": "max7219",
+    "version": "1.0.0",
+    "description": "8X8LED点阵屏",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+		"_locales/zh/max7219-strings.json"
+    ],
+    "public": true
+}
