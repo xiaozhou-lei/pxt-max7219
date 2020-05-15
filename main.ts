@@ -9,7 +9,7 @@ enum rotation_direction {
     one_eighty_degree = 3,
 }
 
-//% color="#EE6A50" weight=10 icon="\uf085"
+//% color="#EE6A50" weight=10 icon="\uf085" block="max7219"
 namespace max7219{
 	
 	const _NOOP = 0 // no-op (do nothing, doesn't change current status)
